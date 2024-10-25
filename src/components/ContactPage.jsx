@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Prop from "../assets/prop.png";
+
 import { FaYoutube } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { useGlobalContext } from "./Context";
