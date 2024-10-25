@@ -31,7 +31,7 @@ const Descriptions = () => {
         </div>
 
         <div className="details text-neutral-600 font-mono text-base sm:text-xl flex flex-col mdd:flex-row justify-between items-center gap-2">
-          <div className="h-1/2 mdd:h-full w-4/5 mdd:max-w-[400px] lg:max-w-[600px] mdd:min-w-[350px] lg:min-w-[400px] bg-red-900">
+          <div className="h-1/2 mdd:h-full w-4/5 mdd:max-w-[400px] lg:max-w-[600px] mdd:min-w-[350px] lg:min-w-[400px]">
             <img
               src={ProjDesc[selectedSn].viewimg}
               className="h-full w-full object-cover mdd:object-scale-down lg:object-fill brightness-75 hover:brightness-90"
