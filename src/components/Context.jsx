@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
-import manndhani from "../assets/manndhani.png";
-import ghumri from "../assets/ghumri.png";
-import Mann from "../assets/Mann.png";
-import shivji from "../assets/shivji.png";
-import timrosath from "../assets/timrosath.png";
-import bahragaun from "../assets/project2.png"
+import backimg1 from "../assets/backimg1.png"
+import backimg2 from "../assets/backimg2.png"
+import projimg3 from "../assets/proj3.png"
 
 const Context = React.createContext();
 
@@ -52,30 +49,30 @@ const ContextProvider = ({ children }) => {
   const ProjDesc = [
     {
       sn: 0,
-      title: "Ghurmi nachaade",
+      title: "Blog App",
       description:
         "A Maith-Hop sensation, seamlessly blends Maithili culture with Hip Hop beats. Surpassing 1.5 million views just in 4 months, it's a TikTok hit with 800K+ plays and remakes.",
-      front_img: ghumri,
-      viewimg: ghumri,
+      front_img: backimg2,
+      viewimg: backimg2,
       Link: "https://www.youtube.com/watch?v=ltg3MEKOQks&pp=ygUPZ2h1cm1pIG5hY2hhYWRl",
       date: "01 / 10 / 2022",
     },
     {
       sn: 1,
-      title: "Shiv Ji",
+      title: "Chat-app",
       description: "Shiv Ji's 'Appan Gang Pura High High' is a regional language sensation. With 1.5+ million views in 6 months, it's a TikTok favorite, boasting 900+ plays and remakes.",
-      front_img: shivji,
-      viewimg: shivji,
+      front_img: backimg1,
+      viewimg: backimg1,
       Link: "https://www.youtube.com/watch?v=dxoz9y4KDOg&pp=ygUHc2hpdiBqaQ%3D%3D",
       date: "04 / 08 / 2022",
     },
     {
       sn: 2,
-      title: "Timro Sath Bina",
+      title: "Freelance Website Project",
       description:
         "Embracing romance, 'Timro Saath Bina,' a Nepali ballad, swiftly captivated hearts with 1 million views in just 11 days, securing a top 3 trending spot on YouTube in Nepal.",
-      front_img: timrosath,
-      viewimg: timrosath,
+      front_img: projimg3,
+      viewimg: projimg3,
       Link: "https://www.youtube.com/watch?v=36cKXdEU5QY&pp=ygUddGltcm8gc2F0aCBiaW5hIHByYW1vZCBraGFyZWw%3D",
       date: "08 / 01 / 2024",
     },
@@ -83,8 +80,8 @@ const ContextProvider = ({ children }) => {
       sn: 3,
       title: "Man ko dhani",
       description: "Uplifting and promoting secularism, 'Man Ko Dhani,' a romantic Nepali song featuring Umar Khan, garnered 420K views in 3 months. A harmonious blend of melody and meaningful messaging.",
-      front_img: manndhani,
-      viewimg: manndhani,
+      front_img: backimg1,
+      viewimg: backimg1,
       Link: "https://www.youtube.com/watch?v=Q7u4iAl_7M0&pp=ygUWbWFuIGtvIGRoYW5pIHVtYXIga2hhbg%3D%3D",
       date: "28 / 09 / 2023",
     },
@@ -92,47 +89,11 @@ const ContextProvider = ({ children }) => {
       sn: 4,
       title: "Man chha",
       description: "Delve into the depths of love with 'Man Chha,' a Nepali romantic song featuring Pushpa Khadka and Prijma Princy Khatiwada. The heartfelt melody amassed 190K views in just 3 months.",
-      front_img: Mann,
-      viewimg: Mann,
+      front_img: backimg1,
+      viewimg: backimg1,
       Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
       date: "16 / 10 / 2023",
-    },
-    {
-      sn: -1,
-      title: "12 gaau of biraj bhatta",
-      description: "A song about tranditionalism.",
-      front_img: bahragaun,
-      viewimg: bahragaun,
-      Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
-      date: "Upcomming . . .",
-    },
-    {
-      sn: -2,
-      title: "12 gaau of biraj bhatta",
-      description: "A song about tranditionalism.",
-      front_img: bahragaun,
-      viewimg: bahragaun,
-      Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
-      date: "Upcomming . . .",
-    },
-    {
-      sn: -3,
-      title: "12 gaau of biraj bhatta",
-      description: "A song about tranditionalism.",
-      front_img: bahragaun,
-      viewimg: bahragaun,
-      Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
-      date: "Upcomming . . .",
-    },
-    {
-      sn: -4,
-      title: "12 gaau of biraj bhatta",
-      description: "A song about tranditionalism.",
-      front_img: bahragaun,
-      viewimg: bahragaun,
-      Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
-      date: "Upcomming . . .",
-    },
+    }
   ];
 
   

@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import "react-slideshow-image/dist/styles.css";
 import { useGlobalContext } from "./Context";
+import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoCalendarOutline } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
 
-import { browserName } from 'react-device-detect';
+import { browserName } from "react-device-detect";
 
 const Projects = () => {
   const { ProjDesc, openModal, _x, offsetY } = useGlobalContext();
@@ -14,14 +15,12 @@ const Projects = () => {
   const [viewy1U, setViewY1U] = useState(0);
   const [viewx2U, setViewX2U] = useState(0);
   const [viewy2U, setViewY2U] = useState(0);
-  const [viewx3U, setViewX3U] = useState(0);
-  const [viewy3U, setViewY3U] = useState(0);
-  const [viewx4U, setViewX4U] = useState(0);
-  const [viewy4U, setViewY4U] = useState(0);
+  const [viewx0U, setViewX0U] = useState(0);
+  const [viewy0U, setViewY0U] = useState(0);
+
   const [visiblity1U, setVisibility1U] = useState("hidee");
   const [visiblity2U, setVisibility2U] = useState("hidee");
-  const [visiblity3U, setVisibility3U] = useState("hidee");
-  const [visiblity4U, setVisibility4U] = useState("hidee");
+  const [visiblity0U, setVisibility0U] = useState("hidee");
 
   const [x13, setx13] = useState(0);
   const [x23, setx23] = useState(0);
@@ -47,11 +46,11 @@ const Projects = () => {
   function stringReset() {
     setReset(true);
   }
-  let a=0;
-  let b=994;
-  if(browserName.includes("Safari")) {
-    a = 75
-    b = 820
+  let a = 0;
+  let b = 994;
+  if (browserName.includes("Safari")) {
+    a = 75;
+    b = 820;
   }
 
   function moveViewU(evt, num) {
@@ -61,40 +60,32 @@ const Projects = () => {
 
     let difference = _x >= 1000 ? 75 : 60;
 
-    if (num == -1) {
+    if (num == 1) {
       setViewX1U(x - difference);
       setViewY1U(y - difference);
       setVisibility1U("pop");
     }
-    if (num == -2) {
+    if (num == 2) {
       setViewX2U(x - difference);
       setViewY2U(y - difference);
       setVisibility2U("pop");
     }
-    if (num == -3) {
-      setViewX3U(x - difference);
-      setViewY3U(y - difference);
-      setVisibility3U("pop");
-    }
-    if (num == -4) {
-      setViewX4U(x - difference);
-      setViewY4U(y - difference);
-      setVisibility4U("pop");
+    if (num == 0) {
+      setViewX0U(x - difference);
+      setViewY0U(y - difference);
+      setVisibility0U("pop");
     }
   }
 
   function hideU(num) {
-    if (num == -1) {
+    if (num == 1) {
       setVisibility1U("hidee");
     }
-    if (num == -2) {
+    if (num == 2) {
       setVisibility2U("hidee");
     }
-    if (num == -3) {
-      setVisibility3U("hidee");
-    }
-    if (num == -4) {
-      setVisibility4U("hidee");
+    if (num == 0) {
+      setVisibility0U("hidee");
     }
   }
 
@@ -127,26 +118,26 @@ const Projects = () => {
       className=" flex flex-col w-full bg-neutral-100 text-black"
       id="myproj"
     >
-      <div className="flex justify-around overflow-hidden">
-      <div className="underlined ml-4 mt-4 pb-2 text-5xl mb-2 sm:text-6xl overflow-visible w-fit h-fit ">
-        Projects
-      </div>
-      <div className="relative guitar-container overflow-hidden z-10 max-w-[500px] top-3 md:top-6">
-              <svg
-                id="canv"
-                className=" guitar w-[90%]"
-                version="1.0"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 1280.000000 911.000000"
-                preserveAspectRatio="xMidYMid meet"
-              >
-                <g
-                  transform="translate(0.000000,911.000000) scale(0.100000,-0.100000)"
-                  fill="#795548"
-                  stroke="none"
-                >
-                  <path
-                    d="M11946 8939 c-229 -151 -261 -170 -271 -155 -7 9 -21 28 -31 42 -48
+      <div className="flex flex-col ml-10 mdd:flex-row mdd:ml-0 justify-around overflow-hidden">
+        <div className="underlined ml-4 mt-4 pb-2 text-5xl mb-2 z-20 sm:text-6xl overflow-visible w-fit h-fit ">
+          Projects
+        </div>
+        <div className="relative guitar-container overflow-hidden z-10 max-w-[500px] top-3 md:top-6">
+          <svg
+            id="canv"
+            className=" guitar w-[90%]"
+            version="1.0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1280.000000 911.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g
+              transform="translate(0.000000,911.000000) scale(0.100000,-0.100000)"
+              fill="#795548"
+              stroke="none"
+            >
+              <path
+                d="M11946 8939 c-229 -151 -261 -170 -271 -155 -7 9 -21 28 -31 42 -48
 65 -59 77 -89 90 -58 24 -119 -10 -131 -73 -12 -66 47 -146 110 -147 44 -1 43
 -2 -106 -99 l-118 -76 -15 29 c-9 17 -19 30 -23 30 -4 0 -13 14 -21 31 -24 55
 -102 85 -152 59 -24 -13 -49 -61 -49 -95 0 -63 59 -125 119 -125 34 0 30 -4
@@ -175,28 +166,28 @@ m-258 -186 c20 -35 37 -66 37 -69 0 -7 -271 -189 -275 -184 -1 2 -22 34 -45
 -148 -268 -148 -4 0 -26 33 -48 73 l-42 72 137 72 c75 40 137 73 138 73 1 0
 20 -31 43 -68z m-373 -199 c21 -38 39 -71 41 -75 6 -13 -57 -38 -96 -38 -60 0
 -98 60 -72 112 14 27 60 68 77 68 6 0 29 -30 50 -67z"
-                  />
-                  <path
-                    d="M10115 7658 c-115 -66 -264 -150 -330 -187 -323 -182 -801 -454 -808
+              />
+              <path
+                d="M10115 7658 c-115 -66 -264 -150 -330 -187 -323 -182 -801 -454 -808
 -460 -4 -4 77 -149 180 -322 103 -173 187 -321 187 -329 0 -11 114 54 341 193
 187 115 345 214 350 220 6 6 -3 3 -18 -7 -16 -10 -30 -16 -32 -14 -1 2 -78
 131 -170 288 -93 157 -175 295 -182 306 -13 20 -11 23 32 49 26 15 48 25 49
 23 2 -1 84 -140 183 -308 162 -273 179 -306 164 -318 -14 -11 -14 -12 0 -5 9
 4 153 93 321 197 l305 189 -104 176 c-58 97 -139 233 -180 304 -41 70 -76 127
 -76 126 -1 0 -96 -54 -212 -121z"
-                  />
-                  <path
-                    d="M8610 6805 c-168 -96 -309 -176 -315 -178 -7 -3 372 -657 393 -678 4
+              />
+              <path
+                d="M8610 6805 c-168 -96 -309 -176 -315 -178 -7 -3 372 -657 393 -678 4
 -4 137 74 296 172 288 178 312 194 288 187 -7 -2 -90 128 -202 317 l-190 320
 23 17 c12 10 20 17 17 17 -3 0 -142 -79 -310 -174z"
-                  />
-                  <path
-                    d="M7948 6429 l-247 -141 33 -51 c18 -29 111 -185 206 -347 96 -162 175
+              />
+              <path
+                d="M7948 6429 l-247 -141 33 -51 c18 -29 111 -185 206 -347 96 -162 175
 -297 176 -299 2 -2 111 63 243 145 l240 148 -18 30 c-10 17 -101 171 -201 341
 -101 171 -184 311 -184 312 -1 1 -112 -61 -248 -138z"
-                  />
-                  <path
-                    d="M4930 6405 c-115 -20 -194 -43 -291 -84 -241 -104 -388 -227 -759
+              />
+              <path
+                d="M4930 6405 c-115 -20 -194 -43 -291 -84 -241 -104 -388 -227 -759
 -631 -259 -282 -332 -338 -498 -381 -123 -32 -279 -34 -627 -9 -358 26 -724
 24 -900 -4 -520 -83 -999 -327 -1366 -695 -151 -152 -254 -295 -333 -461 -314
 -665 -153 -1493 502 -2580 287 -475 619 -883 917 -1123 575 -464 1176 -556
@@ -225,132 +216,211 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
 155 56 223 225 398 446 461 70 20 218 24 297 8z m-2676 -627 c23 -14 1304
 -2191 1304 -2214 0 -42 -28 -66 -175 -154 -157 -93 -198 -107 -231 -77 -29 25
 -1297 2172 -1302 2203 -7 48 26 74 258 207 71 41 120 53 146 35z"
-                  />
-                  <path
-                    d="M7396 6116 c-119 -68 -221 -127 -227 -133 -6 -6 61 -130 197 -359
+              />
+              <path
+                d="M7396 6116 c-119 -68 -221 -127 -227 -133 -6 -6 61 -130 197 -359
 114 -192 210 -353 214 -357 4 -4 106 53 228 128 l221 137 -28 46 c-66 109
 -352 595 -369 626 l-19 35 -217 -123z"
-                  />
-                  <path
-                    d="M6867 5816 c-108 -61 -197 -115 -197 -119 0 -5 97 -172 216 -373 139
+              />
+              <path
+                d="M6867 5816 c-108 -61 -197 -115 -197 -119 0 -5 97 -172 216 -373 139
 -235 220 -362 227 -357 90 53 355 219 364 227 10 9 -11 51 -93 191 -59 99
 -155 262 -214 361 l-106 181 -197 -111z"
-                  />
-                </g>
-              </svg>
+              />
+            </g>
+          </svg>
 
-              <svg
-                className="string absolute z-20"
-                viewBox="0 0 1280.000000 911.000000"
-                onMouseMove={playGuitar}
-                onMouseLeave={stringReset}
-              >
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${416-a} L ${b} ${416-a}`
-                      : `M 0 ${416-a} Q ${bezX-174} ${bezY-a} ${b} ${416-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${426-a} L ${b} ${426-a}`
-                      : `M 0 ${426-a} Q ${bezX-174} ${bezY-a} ${b} ${426-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${436-a} L ${b} ${436-a}`
-                      : `M 0 ${436-a} Q ${bezX-174} ${bezY-a} ${b} ${436-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${446-a} L ${b} ${446-a}`
-                      : `M 0 ${446-a} Q ${bezX-174} ${bezY-a} ${b} ${446-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${456-a} L ${b} ${456-a}`
-                      : `M 0 ${456-a} Q ${bezX-174} ${bezY-a} ${b} ${456-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-                <path
-                  d={
-                    reset
-                      ? `M 0 ${466-a} L ${b} ${466-a}`
-                      : `M 0 ${466-a} Q ${bezX-174} ${bezY-a} ${b} ${466-a}`
-                  }
-                  fill="none"
-                  stroke-width="3"
-                  stroke="white"
-                />
-              </svg>
-      </div>
+          <svg
+            className="string absolute z-20"
+            viewBox="0 0 1280.000000 911.000000"
+            onMouseMove={playGuitar}
+            onMouseLeave={stringReset}
+          >
+            <path
+              d={
+                reset
+                  ? `M 0 ${416 - a} L ${b} ${416 - a}`
+                  : `M 0 ${416 - a} Q ${bezX - 174} ${bezY - a} ${b} ${416 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+            <path
+              d={
+                reset
+                  ? `M 0 ${426 - a} L ${b} ${426 - a}`
+                  : `M 0 ${426 - a} Q ${bezX - 174} ${bezY - a} ${b} ${426 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+            <path
+              d={
+                reset
+                  ? `M 0 ${436 - a} L ${b} ${436 - a}`
+                  : `M 0 ${436 - a} Q ${bezX - 174} ${bezY - a} ${b} ${436 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+            <path
+              d={
+                reset
+                  ? `M 0 ${446 - a} L ${b} ${446 - a}`
+                  : `M 0 ${446 - a} Q ${bezX - 174} ${bezY - a} ${b} ${446 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+            <path
+              d={
+                reset
+                  ? `M 0 ${456 - a} L ${b} ${456 - a}`
+                  : `M 0 ${456 - a} Q ${bezX - 174} ${bezY - a} ${b} ${456 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+            <path
+              d={
+                reset
+                  ? `M 0 ${466 - a} L ${b} ${466 - a}`
+                  : `M 0 ${466 - a} Q ${bezX - 174} ${bezY - a} ${b} ${466 - a}`
+              }
+              fill="none"
+              stroke-width="3"
+              stroke="white"
+            />
+          </svg>
+        </div>
       </div>
       <div className="container1 w-full flex flex-col justify-center gap-[20vh]">
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-4 place-items-center mx-3 overflow-visible">
+        <div className="flex flex-col mdd:grid mdd:grid-cols-2 mdd:gap-[5vw] place-items-center mx-3 overflow-hidden">
           <div className="flex flex-col justify-between items-center md:gap-24 overflow-visible">
-            {ProjDesc.filter((e) => e.sn == 0 || e.sn == 1).map((e) => {
+            {ProjDesc.filter((e) => e.sn == 0 || e.sn == 2).map((e) => {
               if (e.sn == 0)
                 return (
                   <div
                     id="img1"
-                    className="w-full my-5 overflow-hidden rounded-t-3xl   "
+                    className="w-full my-5 overflow-hidden rounded-t-3xl"
                     onClick={() => openModal(e.sn)}
                   >
-                    <div className="w-full overflow-hidden rounded-3xl">
+                    <div
+                      className="w-full overflow-hidden rounded-3xl relative "
+                      id={`imgU${e.sn}`}
+                      onClick={() => openModal(e.sn)}
+                      onMouseMove={(evt) => moveViewU(evt, e.sn)}
+                      onMouseLeave={() => hideU(e.sn)}
+                    >
+                      <div
+                        className={`w-[120px] lg:w-[150px] lg:text-[1.4rem] text-xl  cursor-pointer grid place-items-center z-10 absolute top-0 ${visiblity0U} aspect-square rounded-full backdrop-blur-md view-box text-white`}
+                        style={{
+                          transform: `translate(${viewx0U}px,${viewy0U}px)`,
+                          transition: "all .25s ease-out",
+                        }}
+                      >
+                        <HiOutlineArrowLongRight size={50} />
+                      </div>
                       <img
                         src={e.front_img}
                         className=" rounded-3xl w-full proj_img z-0 "
                       />
                     </div>
                     <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-1 mx-2"><IoCalendarOutline />{e.date}</p>
+                      <p className="flex items-center justify-center gap-1 mx-2">
+                        <IoCalendarOutline />
+                        {e.date}
+                      </p>
                       <p className="text-slate-800">{e.title}</p>
                     </div>
                   </div>
                 );
-              if (e.sn == 1)
+              if (e.sn == 2)
                 return (
                   <div
-                    className="w-full sm:w-4/5 my-5 overflow-hidden rounded-t-3xl   "
+                    className="w-full my-5 overflow-hidden rounded-t-3xl   "
                     id="img2"
                     onClick={() => openModal(e.sn)}
-                  ><div className="w-full overflow-hidden rounded-3xl">
-                    <img
-                      src={e.front_img}
-                      className="rounded-3xl w-full proj_img"
-                    />
+                  >
+                    <div
+                      className="w-full overflow-hidden rounded-3xl relative"
+                      id={`imgU${e.sn}`}
+                      onClick={() => openModal(e.sn)}
+                      onMouseMove={(evt) => moveViewU(evt, e.sn)}
+                      onMouseLeave={() => hideU(e.sn)}
+                    >
+                      <div
+                        className={`w-[120px] lg:w-[150px] lg:text-[1.4rem] text-xl  cursor-pointer grid place-items-center z-10 absolute top-0 ${visiblity2U} aspect-square rounded-full backdrop-blur-md view-box text-white`}
+                        style={{
+                          transform: `translate(${viewx2U}px,${viewy2U}px)`,
+                          transition: "all .25s ease-out",
+                        }}
+                      >
+                        <HiOutlineArrowLongRight size={50} />
+                      </div>
+                      <img
+                        src={e.front_img}
+                        className="rounded-3xl w-full proj_img"
+                      />
                     </div>
                     <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-2 mx-2"><IoCalendarOutline />{e.date}</p>
+                      <p className="flex items-center justify-center gap-2 mx-2">
+                        <IoCalendarOutline />
+                        {e.date}
+                      </p>
                       <p className="text-slate-800">{e.title}</p>
                     </div>
                   </div>
                 );
             })}
-            <HashLink to="/all_projects" className="overflow-visible">
+          </div>
+          <div className="flex flex-col justify-between items-center md:gap-24 relative mdd:top-[10vh] pb-20 overflow-visible">
+            {ProjDesc.filter((e) => e.sn == 1).map((e) => {
+              return (
+                <div
+                  className="w-full my-5 overflow-hidden rounded-t-3xl  "
+                  id="img3"
+                  onClick={() => openModal(e.sn)}
+                >
+                  <div
+                    className="w-full overflow-hidden rounded-3xl relative"
+                    id={`imgU${e.sn}`}
+                    onClick={() => openModal(e.sn)}
+                    onMouseMove={(evt) => moveViewU(evt, e.sn)}
+                    onMouseLeave={() => hideU(e.sn)}
+                  >
+                    <div
+                      className={`w-[120px] lg:w-[150px] lg:text-[1.4rem] text-xl  cursor-pointer grid place-items-center z-10 absolute top-0 ${visiblity1U} aspect-square rounded-full backdrop-blur-md view-box text-white`}
+                      style={{
+                        transform: `translate(${viewx1U}px,${viewy1U}px)`,
+                        transition: "all .25s ease-out",
+                      }}
+                    >
+                      <HiOutlineArrowLongRight size={50} />
+                    </div>
+
+                    <img
+                      src={e.front_img}
+                      className=" min-w-[350px] rounded-3xl w-full proj_img"
+                    />
+                  </div>
+                  <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between  px-0 lg:px-14 text-neutral-600 text-center ">
+                    <p className="flex items-center justify-center gap-1 mx-2">
+                      <IoCalendarOutline />
+                      {e.date}
+                    </p>
+                    <p className="text-slate-800">{e.title}</p>
+                  </div>
+                </div>
+              );
+            })}
+
+            <HashLink to="/all_projects" className="z-20 overflow-visible">
               <div
                 id="magneto3"
                 style={{ transform: `translate(${x13}px,${y13}px)` }}
@@ -374,47 +444,6 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                 </div>
               </div>
             </HashLink>
-          </div>
-          <div className="flex flex-col justify-between items-center md:gap-24">
-            {ProjDesc.filter((e) => e.sn == 2 || e.sn == 3).map((e) => {
-              if (e.sn == 2) {
-                return (
-                  <div
-                    className="w-full sm:w-4/5 my-5 overflow-hidden rounded-t-3xl   "
-                    id="img3"
-                    onClick={() => openModal(e.sn)}
-                  ><div className="w-full overflow-hidden rounded-3xl">
-                    <img
-                      src={e.front_img}
-                      className=" min-w-[350px] rounded-3xl w-full proj_img"
-                    />
-                    </div>
-                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between  px-0 lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-1 mx-2"><IoCalendarOutline />{e.date}</p>
-                      <p className="text-slate-800">{e.title}</p>
-                    </div>
-                  </div>
-                );
-              } else {
-                return (
-                  <div
-                    className="w-full my-5 overflow-hidden rounded-t-3xl   "
-                    id="img4"
-                    onClick={() => openModal(e.sn)}
-                  ><div className="w-full overflow-hidden rounded-3xl">
-                    <img
-                      src={e.front_img}
-                      className=" min-w-[350px] rounded-3xl w-full proj_img"
-                    />
-                    </div>
-                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between  lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-1 mx-2"><IoCalendarOutline />{e.date}</p>
-                      <p className="text-slate-800">{e.title}</p>
-                    </div>
-                  </div>
-                );
-              }
-            })}
           </div>
         </div>
 

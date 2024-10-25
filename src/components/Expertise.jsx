@@ -41,11 +41,12 @@ const Expertise = () => {
     },
     {
       sn: 3,
-      header_: "Qt ( C++ )",
+      header_: "UI / UX Design",
       subheader_: [
-        "C++",
-        "OOP",
-        "GUI Development"
+        "Figma",
+        "Canva",
+        "SVG",
+        "Responsive design"
       ],
       exp_img: pic3,
       backimg: backimg3
@@ -101,7 +102,7 @@ const Expertise = () => {
       className=" overflow-hidden w-full z-0 bg-stone-100 text-slate-900 white relative"
       id="skills"
     >
-      <p className="text-5xl pb-1 sm:text-6xl overflow-hidden ml-4 mt-4 underlined w-fit">
+      <p className="text-5xl pb-1 sm:text-6xl overflow-hidden ml-[10vw] mt-4 underlined w-fit">
         Skills
       </p>
 
@@ -112,8 +113,8 @@ const Expertise = () => {
               key={obj.header_}
               className={`flex ${
                 obj.sn % 2 == 0
-                  ? "flex-row text-left"
-                  : "flex-row-reverse text-right mr-0 sm:mr-4 md:mr-6"
+                  ? "sm:flex-row flex-col-reverse text-left"
+                  : "sm:flex-row-reverse flex-col-reverse text-right mr-0 sm:mr-4 md:mr-6"
               } gap-1 sm:gap-4 md:gap-6 `}
             >
               <div className="flex flex-col w-1/3 gradient-stroke relative justify-center items-center gap-[5vh]">
@@ -133,11 +134,7 @@ const Expertise = () => {
                           obj.sn % 2 == 0 ? "shard-left" : "shard-right"
                         }`}
                       > 
-                        {(e == "Logic Pro X")? <a href="https://www.apple.com/logic-pro/" target="_blank">{e}</a> :
-                        (e == "FL Studio")? <a href="https://www.image-line.com/" target="_blank">{e}</a> :
-                        (e == "Geoshred")? <a href="https://www.moforte.com/" target="_blank">{e}</a> :
-                        (e == "Animoog")? <a href="https://www.moogmusic.com/products/animoog" target="_blank">{e}</a> :
-                        (e == "Launchpads")? <a href="https://novationmusic.com/products/launchpad-x" target="_blank">{e}</a> : e }
+                        {e}
                       </div>
                     );
                   })}
