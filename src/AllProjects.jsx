@@ -56,6 +56,7 @@ const AllProjects = () => {
                   <img
                     src={e.front_img}
                     className="object-cover w-full h-[50vh] brightness-75 hover:brightness-90 hover:scale-105"
+                    onClick={() => openModal(e.sn)}
                   />
                 </div>
                 <div className="text-center flex-grow flex flex-col justify-center items-center text-lg sm:text-2xl text-slate-700 my-1 gap-1">
@@ -63,14 +64,17 @@ const AllProjects = () => {
                     {e.title}
                   </div>
                   <div className="flex w-full  justify-around items-center overflow-visible  text-neutral-500">
-                    <div className="overflow-hidden justify-center items-center flex gap-2">
-                    <IoCalendarOutline />{e.date}</div>
-                    <button
-                      onClick={() => openModal(e.sn)}
-                      className="overflow-visible border-2 border-slate-700 px-5 hover:text-white hover:bg-neutral-700 hover:border-neutral-700  py-1 rounded-3xl"
-                    >
-                      View
-                    </button>
+                    <div className="text-lg sm:text-xl lg:text-2xl z-10 text-slate-800 text-center ">
+                      <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
+                        {e.techIcons}
+                      </p>
+                    </div>
+                      <button
+                        onClick={() => openModal(e.sn)}
+                        className="overflow-visible border-2 border-slate-700 px-5 hover:text-white hover:bg-neutral-700 hover:border-neutral-700  py-1 rounded-3xl"
+                      >
+                        View
+                      </button>
                   </div>
                 </div>
               </div>

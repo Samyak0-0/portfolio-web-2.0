@@ -1,8 +1,24 @@
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
-import backimg1 from "../assets/backimg1.png"
-import backimg2 from "../assets/backimg2.png"
-import projimg3 from "../assets/proj3.png"
+import backimg1 from "../assets/backimg1.png";
+import backimg2 from "../assets/backimg2.png";
+import projimg3 from "../assets/proj3.png";
+
+import { SiNextdotjs } from "react-icons/si";
+import { SiPrisma } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa6";
+import { BiLogoFirebase } from "react-icons/bi";
+import { SiTailwindcss } from "react-icons/si";
+import { IoLogoCss3 } from "react-icons/io";
+import { SiTypescript } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiVite } from "react-icons/si";
+import { IoLogoFigma } from "react-icons/io5";
+import { PiFileSvg } from "react-icons/pi";
+
 
 const Context = React.createContext();
 
@@ -19,14 +35,14 @@ const ContextProvider = ({ children }) => {
 
   const left_scroll = () => {
     if (selectedSn == 0) {
-      setSelectedSn(ProjDesc.length-1-repeatedUpcommingProjects);
+      setSelectedSn(ProjDesc.length - 1 - repeatedUpcommingProjects);
     } else {
       setSelectedSn(selectedSn - 1);
     }
   };
 
   const right_scroll = () => {
-    if (selectedSn >= ProjDesc.length-1-repeatedUpcommingProjects) {
+    if (selectedSn >= ProjDesc.length - 1 - repeatedUpcommingProjects) {
       setSelectedSn(0);
     } else {
       setSelectedSn(selectedSn + 1);
@@ -43,65 +59,125 @@ const ContextProvider = ({ children }) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
-
   const ProjDesc = [
     {
       sn: 0,
       title: "Blog App",
       description:
-        "A Maith-Hop sensation, seamlessly blends Maithili culture with Hip Hop beats. Surpassing 1.5 million views just in 4 months, it's a TikTok hit with 800K+ plays and remakes.",
+        "This blog page allows users log in with Google to create, share and comment on posts, built with Next.js, MongoDB, Prisma, OAuth, and Firebase. With a sleek and simple UI, Users can explore posts by category, share their thoughts and get feedback easily.",
       front_img: backimg2,
       viewimg: backimg2,
-      Link: "https://www.youtube.com/watch?v=ltg3MEKOQks&pp=ygUPZ2h1cm1pIG5hY2hhYWRl",
-      date: "01 / 10 / 2022",
+      Link: "https://blog-app-nine-ecru.vercel.app",
+      techIcons: [
+        <SiNextdotjs />,
+        <SiMongodb />,
+        <SiPrisma />,
+        <BiLogoFirebase />,
+      ],
+      source: "",
     },
     {
       sn: 1,
       title: "Chat-app",
-      description: "Shiv Ji's 'Appan Gang Pura High High' is a regional language sensation. With 1.5+ million views in 6 months, it's a TikTok favorite, boasting 900+ plays and remakes.",
+      description:
+        "A real time messaging app made using the MERN Stack along with json web tokens(JWT), Web Sockets and typescript. Sensitive information are all encrypted using bycrpyt js and stored in mongo DB, the use of Web Sockets allows for real time online status update and communication between users.",
       front_img: backimg1,
       viewimg: backimg1,
-      Link: "https://www.youtube.com/watch?v=dxoz9y4KDOg&pp=ygUHc2hpdiBqaQ%3D%3D",
-      date: "04 / 08 / 2022",
+      Link: "",
+      techIcons: [
+        <SiMongodb />,
+        <SiExpress />,
+        <FaReact />,
+        <FaNodeJs />,
+        <SiTypescript />,
+        <SiTailwindcss />,
+      ],
+      source: "",
     },
     {
       sn: 2,
       title: "Freelance Website Project",
       description:
-        "Embracing romance, 'Timro Saath Bina,' a Nepali ballad, swiftly captivated hearts with 1 million views in just 11 days, securing a top 3 trending spot on YouTube in Nepal.",
+        "A freelance job where I created a stunning musical portfolio fro my client, using react js, tailwind, vite and a focus on easy updatability.",
       front_img: projimg3,
       viewimg: projimg3,
-      Link: "https://www.youtube.com/watch?v=36cKXdEU5QY&pp=ygUddGltcm8gc2F0aCBiaW5hIHByYW1vZCBraGFyZWw%3D",
-      date: "08 / 01 / 2024",
+      Link: "",
+      techIcons: [
+        <FaReact />,
+        <SiTailwindcss />,
+        <SiVite />,
+        <IoLogoFigma />,
+        <PiFileSvg />
+      ],
+      source: "",
     },
     {
       sn: 3,
-      title: "Man ko dhani",
-      description: "Uplifting and promoting secularism, 'Man Ko Dhani,' a romantic Nepali song featuring Umar Khan, garnered 420K views in 3 months. A harmonious blend of melody and meaningful messaging.",
+      title: "Portfolio - v.1.0 (outdated) ",
+      description:
+        "This used to be my previous portfolio website made primarily using react JS.",
       front_img: backimg1,
       viewimg: backimg1,
-      Link: "https://www.youtube.com/watch?v=Q7u4iAl_7M0&pp=ygUWbWFuIGtvIGRoYW5pIHVtYXIga2hhbg%3D%3D",
-      date: "28 / 09 / 2023",
+      Link: "",
+      techIcons: [
+        <FaReact />,
+        <IoLogoCss3 />,
+        <IoLogoJavascript />
+      ],
+      source: "",
     },
     {
       sn: 4,
-      title: "Man chha",
-      description: "Delve into the depths of love with 'Man Chha,' a Nepali romantic song featuring Pushpa Khadka and Prijma Princy Khatiwada. The heartfelt melody amassed 190K views in just 3 months.",
+      title: "Meals Finder App",
+      description:
+        "A website that helps to find new meals and search various recipes with the help of React JS, CSS and Meals API.",
       front_img: backimg1,
       viewimg: backimg1,
-      Link: "https://www.youtube.com/watch?v=YtBv1F1yR00&pp=ygUJbWFubiBjaGhh",
-      date: "16 / 10 / 2023",
-    }
+      Link: "",
+      techIcons: [
+        <FaReact />,
+        <IoLogoCss3 />,
+        <IoLogoJavascript />
+      ],
+      source: "",
+    },
+    {
+      sn: 5,
+      title: "Stock Tracker App",
+      description:
+        "A website that can track all of the popular stocks, explore new ones and observe their performances in graph using the data fetched from FinnHub API.",
+      front_img: backimg2,
+      viewimg: backimg2,
+      Link: "https://blog-app-nine-ecru.vercel.app",
+      techIcons: [
+        <FaReact />,
+        <IoLogoCss3 />,
+        <IoLogoJavascript />
+      ],
+      source: "",
+    },
+    {
+      sn: 6,
+      title: "Team Manager App",
+      description:
+        " A website to help you or an organization manage, assign and track your specific team and their team members.",
+      front_img: backimg2,
+      viewimg: backimg2,
+      Link: "",
+      techIcons: [
+        <FaReact />,
+        <IoLogoCss3 />,
+        <IoLogoJavascript />
+      ],
+      source: "",
+    },
   ];
 
-  
   const openModal = (sn) => {
-    const b = ProjDesc.findIndex((e) => e.sn==sn)
-    setSelectedSn(b)
-    setShowModal(true)
-  }
+    const b = ProjDesc.findIndex((e) => e.sn == sn);
+    setSelectedSn(b);
+    setShowModal(true);
+  };
 
   const [_x, set_X] = useState(window.innerWidth);
   useEffect(() => {
@@ -125,7 +201,7 @@ const ContextProvider = ({ children }) => {
         left_scroll,
         ProjDesc,
         repeatedUpcommingProjects,
-        numberOfUpcommingProjects
+        numberOfUpcommingProjects,
       }}
     >
       {children}

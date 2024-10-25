@@ -300,8 +300,8 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
         </div>
       </div>
       <div className="container1 w-full flex flex-col justify-center gap-[20vh]">
-        <div className="flex flex-col mdd:grid mdd:grid-cols-2 mdd:gap-[5vw] place-items-center mx-3 overflow-hidden">
-          <div className="flex flex-col justify-between items-center md:gap-24 overflow-visible">
+        <div className="flex flex-col mdd:grid mdd:grid-cols-2 md:gap-7 mdd:gap-[5vw] place-items-center mx-3 overflow-hidden">
+          <div className="flex flex-col justify-between items-center md:gap-7 mdd:gap-24 overflow-visible">
             {ProjDesc.filter((e) => e.sn == 0 || e.sn == 2).map((e) => {
               if (e.sn == 0)
                 return (
@@ -332,12 +332,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                         className=" rounded-3xl w-full proj_img z-0 "
                       />
                     </div>
-                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-1 mx-2">
-                        <IoCalendarOutline />
-                        {e.date}
+                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between text-slate-800 text-center ">
+                      <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
+                        {e.techIcons}
                       </p>
-                      <p className="text-slate-800">{e.title}</p>
+                      <p className="mr-3">{e.title}</p>
                     </div>
                   </div>
                 );
@@ -370,12 +369,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                         className="rounded-3xl w-full proj_img"
                       />
                     </div>
-                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between lg:px-14 text-neutral-600 text-center ">
-                      <p className="flex items-center justify-center gap-2 mx-2">
-                        <IoCalendarOutline />
-                        {e.date}
+                    <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between text-slate-800 text-center ">
+                      <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
+                        {e.techIcons}
                       </p>
-                      <p className="text-slate-800">{e.title}</p>
+                      <p className="mr-3">{e.title}</p>
                     </div>
                   </div>
                 );
@@ -412,13 +410,12 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                       className=" min-w-[350px] rounded-3xl w-full proj_img"
                     />
                   </div>
-                  <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between  px-0 lg:px-14 text-neutral-600 text-center ">
-                    <p className="flex items-center justify-center gap-1 mx-2">
-                      <IoCalendarOutline />
-                      {e.date}
-                    </p>
-                    <p className="text-slate-800">{e.title}</p>
-                  </div>
+                  <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between text-slate-800 text-center ">
+                      <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
+                        {e.techIcons}
+                      </p>
+                      <p className="mr-3">{e.title}</p>
+                    </div>
                 </div>
               );
             })}

@@ -17,18 +17,16 @@ const Expertise = () => {
   const [viewy2, setViewY2] = useState(0);
   const [viewx3, setViewX3] = useState(0);
   const [viewy3, setViewY3] = useState(0);
-  const [viewx4, setViewX4] = useState(0);
-  const [viewy4, setViewY4] = useState(0);
+
   const [visiblity1, setVisibility1] = useState("hidee");
   const [visiblity2, setVisibility2] = useState("hidee");
   const [visiblity3, setVisibility3] = useState("hidee");
-  const [visiblity4, setVisibility4] = useState("hidee");
 
   const skills = [
     {
       sn: 1,
       header_: "MERN Stack",
-      subheader_: ["MongoDB", "MySQL", "Express", "React", "Node"],
+      subheader_: ["MongoDB", "MySQL", "Express", "React", "TypeScript", "Node"],
       exp_img: pic1,
       backimg: backimg1
     },
