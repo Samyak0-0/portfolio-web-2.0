@@ -118,11 +118,11 @@ const Projects = () => {
       className=" flex flex-col w-full bg-neutral-100 text-black"
       id="myproj"
     >
-      <div className="flex flex-col ml-10 mdd:flex-row mdd:ml-0 justify-around overflow-hidden">
+      <div className="flex flex-col ml-8 mdd:flex-row mdd:ml-0 justify-around overflow-hidden">
         <div className="underlined ml-4 mt-4 pb-2 text-5xl mb-2 z-20 sm:text-6xl overflow-visible w-fit h-fit ">
           Projects
         </div>
-        <div className="relative guitar-container overflow-hidden z-10 max-w-[500px] top-3 md:top-6">
+        <div className="relative guitar-container overflow-hidden z-10 max-w-[500px] top-3 md:top-6 md:ml-20 mdd:ml-0">
           <svg
             id="canv"
             className=" guitar w-[90%]"
@@ -315,6 +315,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                       id={`imgU${e.sn}`}
                       onClick={() => openModal(e.sn)}
                       onMouseMove={(evt) => moveViewU(evt, e.sn)}
+                      onMouseOver={(evt) => moveViewU(evt, e.sn)}
                       onMouseLeave={() => hideU(e.sn)}
                     >
                       <div
@@ -351,6 +352,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                       className="w-full overflow-hidden rounded-3xl relative"
                       id={`imgU${e.sn}`}
                       onClick={() => openModal(e.sn)}
+                      onMouseOver={(evt) => moveViewU(evt, e.sn)}
                       onMouseMove={(evt) => moveViewU(evt, e.sn)}
                       onMouseLeave={() => hideU(e.sn)}
                     >
@@ -392,6 +394,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                     id={`imgU${e.sn}`}
                     onClick={() => openModal(e.sn)}
                     onMouseMove={(evt) => moveViewU(evt, e.sn)}
+                    onMouseOver={(evt) => moveViewU(evt, e.sn)}
                     onMouseLeave={() => hideU(e.sn)}
                   >
                     <div

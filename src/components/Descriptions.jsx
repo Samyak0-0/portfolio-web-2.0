@@ -33,30 +33,26 @@ const Descriptions = () => {
         </div>
 
         <div className="details text-neutral-600 font-mono text-base sm:text-xl flex flex-col mdd:flex-row justify-between items-center gap-2">
-          <div className="h-1/2 mdd:h-full w-4/5 mdd:max-w-[400px] lg:max-w-[600px] mdd:min-w-[350px] lg:min-w-[400px]">
+          <div className="h-1/2 mdd:h-full w-4/5 mdd:max-w-[400px] lg:max-w-[600px] mdd:min-w-[350px] lg:min-w-[400px] ">
             <img
               src={ProjDesc[selectedSn].viewimg}
-              className="h-full w-full object-cover md:object-scale-down mdd:object-cover brightness-75 hover:brightness-90"
+              className="h-full  object-cover md:object-scale-down mdd:object-cover lg:object-fill brightness-75 hover:brightness-90"
               alt="image here"
             ></img>
           </div>
-          <div className="flex-grow overflow-visible">
-            <div className="title text-xl sm:text-3xl text-slate-700 font-semibold my-3">
+          <div className="overflow-visible flex-shrink">
+            <div className="title text-xl md:text-3xl text-slate-700 font-semibold my-3">
               {ProjDesc[selectedSn].title}
             </div>
-            <div className="description">
+            <div className="description text-base md:text-xl mdd:w-[30vw]">
               {ProjDesc[selectedSn].description}
             </div>
-            <div className="mt-2 text-slate-700">
-              Link:{" "}
-              <a
-                href={`${ProjDesc[selectedSn].Link}`}
-                target="_blank"
-                className="linked"
-              >
-                Click here
-              </a>
-            </div>
+            
+              <div className="modal_links w-full text-base md:text-xl ">
+                <div className="grid place-items-center"><a href={ProjDesc[selectedSn].website_source} target='_blank'  className="website_source"> Source Code </a></div>
+                <div className="grid place-items-center"><a href={ProjDesc[selectedSn].Link} target='_blank'  className="website_link">Website Link</a></div>
+              </div>
+            
           </div>
         </div>
       </div>

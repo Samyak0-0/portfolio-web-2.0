@@ -119,7 +119,7 @@ const Expertise = () => {
             >
               <div className="flex flex-col w-1/3 gradient-stroke relative justify-center items-center gap-[5vh]">
                 <div
-                  className={`text-xl sm:text-2xl md:text-4xl font-semibold overflow-hidden relative shard ${
+                  className={`text-xl sm:text-2xl mdd:text-4xl font-semibold overflow-hidden relative shard ${
                     obj.sn % 2 == 0 ? "shard-left" : "shard-right"
                   }`}
                 >
@@ -130,7 +130,7 @@ const Expertise = () => {
                     return (
                       <div
                         key={e}
-                        className={`text-lg sm:text-2xl relative shard overflow-hidden py-1 ${
+                        className={`text-base md:text-xl mdd:text-2xl relative shard overflow-hidden py-1 ${
                           obj.sn % 2 == 0 ? "shard-left" : "shard-right"
                         }`}
                       > 

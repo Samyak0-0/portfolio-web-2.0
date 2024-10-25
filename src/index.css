@@ -380,8 +380,49 @@ div[id^="magneto"] {
   background-color: white;
 }
 
+.modal_links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.website_source, .website_link {
+  text-decoration: none;
+  background-color: #00000000;
+  color: #272f3b;
+  border: 2px solid #334155;
+  margin: 10px 1rem;
+  padding: 10px 20px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.website_source:before, .website_link:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  transform: scale(0);
+  background-color: #5a6f8d57;
+  border-radius: 27px;
+  transition: 0.2s ease-in-out;
+}
+
+.website_source:hover:before, .website_link:hover:before {
+  transform: scale(1);
+}
+.website_link:hover, .website_source:hover {
+  color: white;
+  background-color: #272f3b;
+}
+
+
 .mac_tab {
-  background-color: #dee1e6;
+  background-color: #454547;
   display: flex;
   flex-direction: row;
   /* background-color: #2a3033; */
@@ -404,10 +445,10 @@ div[class$="scroll"] {
   width: 50px;
   height: 50px;
   border-radius: 100%;
-  border: 4px solid #dee1e6;
+  border: 4px solid #454547;
   display: grid;
   place-items: center;
-  color: #dee1e6;
+  color: #454547;
   cursor: pointer;
 }
 
@@ -478,14 +519,6 @@ div[class$="scroll"] {
 
 .nav_link:hover:before {
   transform: scale(1.4);
-}
-
-.linked:hover {
-  text-decoration: underline;
-}
-
-.linked {
-  transition: all 0.2s ease-in;
 }
 
 .hide {
