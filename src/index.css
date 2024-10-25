@@ -385,7 +385,6 @@ div[id^="magneto"] {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 100px;
 }
 
 .website_source, .website_link {
@@ -394,7 +393,6 @@ div[id^="magneto"] {
   color: #272f3b;
   border: 2px solid #334155;
   margin: 10px 1rem;
-  padding: 10px 20px;
   border-radius: 30px;
   position: relative;
 }
@@ -441,6 +439,7 @@ div[id^="magneto"] {
 
 div[class$="scroll"] {
   position: absolute;
+  z-index: 100;
   background: #ffffff;
   width: 50px;
   height: 50px;

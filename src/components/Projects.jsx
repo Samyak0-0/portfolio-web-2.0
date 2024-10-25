@@ -411,11 +411,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                     />
                   </div>
                   <div className="proj_captions text-lg sm:text-xl lg:text-2xl z-10 flex justify-between text-slate-800 text-center ">
-                      <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
-                        {e.techIcons}
-                      </p>
-                      <p className="mr-3">{e.title}</p>
-                    </div>
+                    <p className="flex items-center justify-center gap-1 mx-3 mdd:mx-4 lg:mx-5">
+                      {e.techIcons}
+                    </p>
+                    <p className="mr-3">{e.title}</p>
+                  </div>
                 </div>
               );
             })}

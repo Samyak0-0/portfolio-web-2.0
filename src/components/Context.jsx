@@ -1,8 +1,14 @@
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
+
 import backimg1 from "../assets/backimg1.png";
 import backimg2 from "../assets/backimg2.png";
 import projimg3 from "../assets/proj3.png";
+
+import portfolio_v1 from "../assets/portfolio_v1.png";
+import stock_tracker_app from "../assets/stock_tracker_app.png";
+import meals_app from "../assets/meals_app.png";
+import team_member_app from "../assets/team_member_app.png";
 
 import { SiNextdotjs } from "react-icons/si";
 import { SiPrisma } from "react-icons/si";
@@ -74,7 +80,7 @@ const ContextProvider = ({ children }) => {
         <SiPrisma />,
         <BiLogoFirebase />,
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/blog",
     },
     {
       sn: 1,
@@ -83,7 +89,7 @@ const ContextProvider = ({ children }) => {
         "A real time messaging app made using the MERN Stack along with json web tokens(JWT), Web Sockets and typescript. Sensitive information are all encrypted using bycrpyt js and stored in mongo DB, the use of Web Sockets allows for real time online status update and communication between users.",
       front_img: backimg1,
       viewimg: backimg1,
-      Link: "",
+      Link: "https://chat-app-live-v2.onrender.com",
       techIcons: [
         <SiMongodb />,
         <SiExpress />,
@@ -92,7 +98,7 @@ const ContextProvider = ({ children }) => {
         <SiTypescript />,
         <SiTailwindcss />,
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/chat-app-live-v2",
     },
     {
       sn: 2,
@@ -101,7 +107,7 @@ const ContextProvider = ({ children }) => {
         "A freelance job where I created a stunning musical portfolio fro my client, using react js, tailwind, vite and a focus on easy updatability.",
       front_img: projimg3,
       viewimg: projimg3,
-      Link: "",
+      Link: "https://www.avinashpaswan.com.np",
       techIcons: [
         <FaReact />,
         <SiTailwindcss />,
@@ -109,67 +115,67 @@ const ContextProvider = ({ children }) => {
         <IoLogoFigma />,
         <PiFileSvg />
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/music_portfolio_project_v2",
     },
     {
       sn: 3,
       title: "Portfolio - v.1.0 (outdated) ",
       description:
         "This used to be my previous portfolio website made primarily using react JS.",
-      front_img: backimg1,
-      viewimg: backimg1,
-      Link: "",
+      front_img: portfolio_v1,
+      viewimg: portfolio_v1,
+      Link: "https://www.samyak00.com.np",
       techIcons: [
         <FaReact />,
         <IoLogoCss3 />,
         <IoLogoJavascript />
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/temp-portfolio-website",
     },
     {
       sn: 4,
       title: "Meals Finder App",
       description:
         "A website that helps to find new meals and search various recipes with the help of React JS, CSS and Meals API.",
-      front_img: backimg1,
-      viewimg: backimg1,
-      Link: "",
+      front_img: meals_app,
+      viewimg: meals_app,
+      Link: "https://samyak0-0.github.io/meals_finder_app",
       techIcons: [
         <FaReact />,
         <IoLogoCss3 />,
         <IoLogoJavascript />
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/meals_finder_app",
     },
     {
       sn: 5,
       title: "Stock Tracker App",
       description:
         "A website that can track all of the popular stocks, explore new ones and observe their performances in graph using the data fetched from FinnHub API.",
-      front_img: backimg2,
-      viewimg: backimg2,
-      Link: "https://blog-app-nine-ecru.vercel.app",
+      front_img: stock_tracker_app,
+      viewimg: stock_tracker_app,
+      Link: "https://stock-tracker-app-samyaks-projects.vercel.app",
       techIcons: [
         <FaReact />,
         <IoLogoCss3 />,
         <IoLogoJavascript />
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/stock_tracker_app",
     },
     {
       sn: 6,
       title: "Team Manager App",
       description:
         " A website to help you or an organization manage, assign and track your specific team and their team members.",
-      front_img: backimg2,
-      viewimg: backimg2,
-      Link: "",
+      front_img: team_member_app,
+      viewimg: team_member_app,
+      Link: "https://samyak0-0.github.io/team_member_app",
       techIcons: [
         <FaReact />,
         <IoLogoCss3 />,
         <IoLogoJavascript />
       ],
-      source: "",
+      source: "https://github.com/Samyak0-0/team_member_app",
     },
   ];
 
