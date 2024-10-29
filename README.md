@@ -48,5 +48,4 @@ Open [localhost:5173](http://localhost:5173) to view in the browser.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
-
+Distributed under the [MIT](https://choosealicense.com/licenses/mit/) License. 
