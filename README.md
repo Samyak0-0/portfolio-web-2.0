@@ -15,6 +15,12 @@ A creative and professional portfolio website built using React, Vite and Tailwi
 [Visit Website](https://portfolio-web-2-0.vercel.app)
 
 
+## Features
+
+- **Smooth Scroll-Based Animations**: Fluid animations during navigation.
+- **Responsive Design**: Optimized for various devices.
+- **Cross-Browser Compatibility**: Ensures functionality across major browsers.
+  
 
 ## Run Locally
 
