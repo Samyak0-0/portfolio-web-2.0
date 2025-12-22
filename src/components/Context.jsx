@@ -5,6 +5,13 @@ import backimg1 from "../assets/backimg1.png";
 import backimg2 from "../assets/backimg2.png";
 import projimg3 from "../assets/proj3.png";
 
+import investra1 from "../assets/investra1.png"
+import investra2 from "../assets/investra2.png"
+import travelapes1 from "../assets/travelapes1.jpg"
+import travelapes2 from "../assets/travelapes2.jpg"
+import habitician1 from "../assets/habitician1.jpg"
+import habitician2 from "../assets/habitician2.jpg"
+
 import portfolio_v1 from "../assets/portfolio_v1.png";
 import stock_tracker_app from "../assets/stock_tracker_app.png";
 import meals_app from "../assets/meals_app.png";
@@ -24,7 +31,12 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { SiVite } from "react-icons/si";
 import { IoLogoFigma } from "react-icons/io5";
 import { PiFileSvg } from "react-icons/pi";
-
+import { FaPython } from "react-icons/fa";
+import { BiLogoPostgresql } from "react-icons/bi";
+// import { BiHive } from "react-icons/bi";
+// import { FaFlutter } from "react-icons/fa6";
+import { DiDart } from "react-icons/di";
+// import { FaMap } from "react-icons/fa";
 
 const Context = React.createContext();
 
@@ -68,6 +80,50 @@ const ContextProvider = ({ children }) => {
   const ProjDesc = [
     {
       sn: 0,
+      title: "Habitician",
+      description:
+        "Habitican, a personal habit tracking and day planner app built using Flutter. It includes a habit tracker, integrated daily to-do list, along with personalized scheduling, notifications(reminders), and trackers for each habit and daily goals.",
+      front_img: habitician1,
+      viewimg: habitician2,
+      Link: "https://github.com/Samyak0-0/habitican",
+      techIcons: [
+      //  <FaFlutter />,
+       <DiDart />,
+      //  <BiHive />
+      ],
+      source: "https://github.com/Samyak0-0/blog",
+    },{
+      sn: 1,
+      title: "TravlApes",
+      description:
+        "TravlApes is an travel planner app and a live trip guide built using Flutter, Fast API and Open Street Map(OSM). It includes personalized travel recommendations, Routing features during a trip and shareable trip snapshots",
+      front_img: travelapes1,
+      viewimg: travelapes2,
+      Link: "https://github.com/Samyak0-0/TravlApes_frontend/",
+      techIcons: [
+      //  <FaFlutter />,
+       <DiDart />,
+      //  <FaPython />,
+      //  <FaMap />
+      ],
+      source: "https://github.com/Samyak0-0/TravlApes_backend",
+    },{
+      sn: 2,
+      title: "Investra",
+      description:
+        "A web-based application that combines modern web development with intelligent predictive models. It features a LSTM neural network, sentiment analysis and Monte Carlo simulations to predict and analyse the stock market, built using Next.js, Flask, and PostgreSQL.",
+      front_img: investra1,
+      viewimg: investra2,
+      Link: "https://github.com/Samyak0-0/investra_frontend",
+      techIcons: [
+        <SiNextdotjs />,
+        <FaPython />,
+        <BiLogoPostgresql />,
+      ],
+      source: "https://github.com/Samyak0-0/investra_backend",
+    },
+    {
+      sn: 3,
       title: "Blog App",
       description:
         "This blog page allows users log in with Google to create, share and comment on posts, built with Next.js, MongoDB, Prisma, OAuth, and Firebase. With a sleek and simple UI, Users can explore posts by category, share their thoughts and get feedback easily.",
@@ -75,15 +131,16 @@ const ContextProvider = ({ children }) => {
       viewimg: backimg2,
       Link: "https://blog-app-nine-ecru.vercel.app",
       techIcons: [
-        <SiNextdotjs />,
+       <SiNextdotjs />,
         <SiMongodb />,
         <SiPrisma />,
-        <BiLogoFirebase />,
+        <BiLogoFirebase />, 
+       
       ],
       source: "https://github.com/Samyak0-0/blog",
     },
     {
-      sn: 1,
+      sn: 4,
       title: "Chat-app",
       description:
         "A real time messaging app made using the MERN Stack along with json web tokens(JWT), Web Sockets and typescript. Sensitive information are all encrypted using bycrpyt js and stored in mongo DB, the use of Web Sockets allows for real time online status update and communication between users.",
@@ -101,7 +158,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/chat-app-live-v2",
     },
     {
-      sn: 2,
+      sn: 5,
       title: "Freelance Website Project",
       description:
         "A freelance job where I created a stunning musical portfolio fro my client, using react js, tailwind, vite and a focus on easy updatability.",
@@ -118,7 +175,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/music_portfolio_project_v2",
     },
     {
-      sn: 3,
+      sn: 6,
       title: "Portfolio - v.1.0 (outdated) ",
       description:
         "This used to be my previous portfolio website made primarily using react JS.",
@@ -133,7 +190,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/temp-portfolio-website",
     },
     {
-      sn: 4,
+      sn: 7,
       title: "Meals Finder App",
       description:
         "A website that helps to find new meals and search various recipes with the help of React JS, CSS and Meals API.",
@@ -148,7 +205,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/meals_finder_app",
     },
     {
-      sn: 5,
+      sn: 8,
       title: "Stock Tracker App",
       description:
         "A website that can track all of the popular stocks, explore new ones and observe their performances in graph using the data fetched from FinnHub API.",
@@ -163,7 +220,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/stock_tracker_app",
     },
     {
-      sn: 6,
+      sn: 9,
       title: "Team Manager App",
       description:
         " A website to help you or an organization manage, assign and track your specific team and their team members.",
