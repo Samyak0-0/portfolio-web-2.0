@@ -3,9 +3,9 @@ import TagCanvas from "tag-canvas";
 import { useGlobalContext } from "./Context";
 import pic1 from "../assets/pic1.png";
 import pic3 from "../assets/pic3.png";
-import pic2 from "../assets/pic2.png";
-import backimg1 from "../assets/backimg1.png"
-import backimg2 from "../assets/backimg2.png"
+import backimg1 from "../assets/backimg1.png";
+import habitician1 from "../assets/habitician1.jpg"
+import habitician2 from "../assets/habitician2.jpg"
 import backimg3 from "../assets/backimg3.png"
 
 const Expertise = () => {
@@ -25,17 +25,17 @@ const Expertise = () => {
   const skills = [
     {
       sn: 1,
-      header_: "MERN Stack",
-      subheader_: ["MongoDB", "MySQL", "Express", "React", "TypeScript", "Node"],
+      header_: "MERN & Next",
+      subheader_: ["Next Js", "MongoDB", "MySQL", "Express", "React", "TypeScript", "Node"],
       exp_img: pic1,
       backimg: backimg1
     },
     {
       sn: 2,
-      header_: "NEXT JS",
-      subheader_: ["NEXT", "Prisma", "OAuth", "Firebase", "Web Sockets"],
-      exp_img: pic2,
-      backimg: backimg2
+      header_: "Flutter",
+      subheader_: ["Flutter", "Hive", "Firebase","Hive" ],
+      exp_img: habitician1,
+      backimg: habitician2
     },
     {
       sn: 3,

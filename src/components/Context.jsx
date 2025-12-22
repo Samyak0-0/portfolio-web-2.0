@@ -33,9 +33,10 @@ import { IoLogoFigma } from "react-icons/io5";
 import { PiFileSvg } from "react-icons/pi";
 import { FaPython } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-// import { BiHive } from "react-icons/bi";
-// import { FaFlutter } from "react-icons/fa6";
+import { BiHive } from "react-icons/bi";
+import { SiFlutter } from "react-icons/si";
 import { DiDart } from "react-icons/di";
+import { CiMap } from "react-icons/ci";
 // import { FaMap } from "react-icons/fa";
 
 const Context = React.createContext();
@@ -87,9 +88,9 @@ const ContextProvider = ({ children }) => {
       viewimg: habitician2,
       Link: "https://github.com/Samyak0-0/habitican",
       techIcons: [
-      //  <FaFlutter />,
+     <SiFlutter />,
        <DiDart />,
-      //  <BiHive />
+       <BiHive />
       ],
       source: "https://github.com/Samyak0-0/blog",
     },{
@@ -101,10 +102,10 @@ const ContextProvider = ({ children }) => {
       viewimg: travelapes2,
       Link: "https://github.com/Samyak0-0/TravlApes_frontend/",
       techIcons: [
-      //  <FaFlutter />,
+      <SiFlutter />,
        <DiDart />,
-      //  <FaPython />,
-      //  <FaMap />
+       <FaPython />,
+       <CiMap />
       ],
       source: "https://github.com/Samyak0-0/TravlApes_backend",
     },{
