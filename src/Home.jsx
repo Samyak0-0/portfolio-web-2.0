@@ -1,6 +1,5 @@
-import React from "react";
 import Homepage from "./components/Homepage";
-import Expertise from "./components/Expertise";
+import Expertise2 from "./components/Expertise2";
 import Projects from "./components/Projects";
 import ContactPage from "./components/ContactPage";
 
@@ -8,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Homepage />
-      <Expertise />
+      <Expertise2 />
       <Projects />
       <ContactPage />
     </>

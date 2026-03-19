@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useGlobalContext } from "./Context";
 import { IoIosClose } from "react-icons/io";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const { menu, setMenu, _x, offsetY } = useGlobalContext();
@@ -25,17 +25,17 @@ const Navbar = () => {
 
     const newX = (e.clientX - boundBox.left) / magneto.offsetWidth - 0.5;
     const newY = (e.clientY - boundBox.top) / magneto.offsetHeight - 0.5;
-    setx1(newX*40)
-    setx2(newX*40)
-    sety1(newY*40)
-    sety2(newY*40)
+    setx1(newX * 40);
+    setx2(newX * 40);
+    sety1(newY * 40);
+    sety2(newY * 40);
   }
 
   function resetMagneto(e) {
-    setx1(0)
-    setx2(0)
-    sety1(0)
-    sety2(0)
+    setx1(0);
+    setx2(0);
+    sety1(0);
+    sety2(0);
   }
 
   return (
@@ -58,7 +58,11 @@ const Navbar = () => {
             </HashLink>
           </li>
           <li className="nav_elements">
-            <a href="https://blog-app-nine-ecru.vercel.app/" target="_blank" className="nav_link">
+            <a
+              href="https://blog-app-nine-ecru.vercel.app/"
+              target="_blank"
+              className="nav_link"
+            >
               Blog
             </a>
           </li>

@@ -5,12 +5,12 @@ import backimg1 from "../assets/backimg1.png";
 import backimg2 from "../assets/backimg2.png";
 import projimg3 from "../assets/proj3.png";
 
-import investra1 from "../assets/investra1.png"
-import investra2 from "../assets/investra2.png"
-import travelapes1 from "../assets/travelapes1.jpg"
-import travelapes2 from "../assets/travelapes2.jpg"
-import habitician1 from "../assets/habitician1.jpg"
-import habitician2 from "../assets/habitician2.jpg"
+import investra1 from "../assets/investra1.png";
+import investra2 from "../assets/investra2.png";
+import travelapes1 from "../assets/travelapes1.jpg";
+import travelapes2 from "../assets/travelapes2.jpg";
+import habitician1 from "../assets/habitician1.jpg";
+import habitician2 from "../assets/habitician2.jpg";
 
 import portfolio_v1 from "../assets/portfolio_v1.png";
 import stock_tracker_app from "../assets/stock_tracker_app.png";
@@ -88,12 +88,13 @@ const ContextProvider = ({ children }) => {
       viewimg: habitician2,
       Link: "https://github.com/Samyak0-0/habitican",
       techIcons: [
-     <SiFlutter />,
-       <DiDart />,
-       <BiHive />
+        <SiFlutter key="flutter" />,
+        <DiDart key="dart" />,
+        <BiHive key="hive" />,
       ],
       source: "https://github.com/Samyak0-0/blog",
-    },{
+    },
+    {
       sn: 1,
       title: "TravlApes",
       description:
@@ -101,14 +102,15 @@ const ContextProvider = ({ children }) => {
       front_img: travelapes1,
       viewimg: travelapes2,
       Link: "https://github.com/Samyak0-0/TravlApes_frontend/",
-      techIcons: [
-      <SiFlutter />,
-       <DiDart />,
-       <FaPython />,
-       <CiMap />
-      ],
       source: "https://github.com/Samyak0-0/TravlApes_backend",
-    },{
+      techIcons: [
+        <SiFlutter key="flutter" />,
+        <DiDart key="dart" />,
+        <FaPython key="python" />,
+        <CiMap key="map" />,
+      ],
+    },
+    {
       sn: 2,
       title: "Investra",
       description:
@@ -117,9 +119,9 @@ const ContextProvider = ({ children }) => {
       viewimg: investra2,
       Link: "https://github.com/Samyak0-0/investra_frontend",
       techIcons: [
-        <SiNextdotjs />,
-        <FaPython />,
-        <BiLogoPostgresql />,
+        <SiNextdotjs key="nextjs" />,
+        <FaPython key="python" />,
+        <BiLogoPostgresql key="postgresql" />,
       ],
       source: "https://github.com/Samyak0-0/investra_backend",
     },
@@ -132,11 +134,10 @@ const ContextProvider = ({ children }) => {
       viewimg: backimg2,
       Link: "https://blog-app-nine-ecru.vercel.app",
       techIcons: [
-       <SiNextdotjs />,
-        <SiMongodb />,
-        <SiPrisma />,
-        <BiLogoFirebase />, 
-       
+        <SiNextdotjs key="nextjs" />,
+        <SiMongodb key="mongodb" />,
+        <SiPrisma key="prisma" />,
+        <BiLogoFirebase key="firebase" />,
       ],
       source: "https://github.com/Samyak0-0/blog",
     },
@@ -149,12 +150,12 @@ const ContextProvider = ({ children }) => {
       viewimg: backimg1,
       Link: "https://chat-app-live-v2.onrender.com",
       techIcons: [
-        <SiMongodb />,
-        <SiExpress />,
-        <FaReact />,
-        <FaNodeJs />,
-        <SiTypescript />,
-        <SiTailwindcss />,
+        <SiMongodb key="mongodb" />,
+        <SiExpress key="express" />,
+        <FaReact key="react" />,
+        <FaNodeJs key="nodejs" />,
+        <SiTypescript key="typescript" />,
+        <SiTailwindcss key="tailwind" />,
       ],
       source: "https://github.com/Samyak0-0/chat-app-live-v2",
     },
@@ -167,11 +168,11 @@ const ContextProvider = ({ children }) => {
       viewimg: projimg3,
       Link: "https://www.avinashpaswan.com.np",
       techIcons: [
-        <FaReact />,
-        <SiTailwindcss />,
-        <SiVite />,
-        <IoLogoFigma />,
-        <PiFileSvg />
+        <FaReact key="react" />,
+        <SiTailwindcss key="tailwind" />,
+        <SiVite key="vite" />,
+        <IoLogoFigma key="figma" />,
+        <PiFileSvg key="svg" />,
       ],
       source: "https://github.com/Samyak0-0/music_portfolio_project_v2",
     },
@@ -184,9 +185,9 @@ const ContextProvider = ({ children }) => {
       viewimg: portfolio_v1,
       Link: "https://www.samyak00.com.np",
       techIcons: [
-        <FaReact />,
-        <IoLogoCss3 />,
-        <IoLogoJavascript />
+        <FaReact key="react" />,
+        <IoLogoCss3 key="css3" />,
+        <IoLogoJavascript key="javascript" />,
       ],
       source: "https://github.com/Samyak0-0/temp-portfolio-website",
     },
@@ -199,9 +200,9 @@ const ContextProvider = ({ children }) => {
       viewimg: meals_app,
       Link: "https://samyak0-0.github.io/meals_finder_app",
       techIcons: [
-        <FaReact />,
-        <IoLogoCss3 />,
-        <IoLogoJavascript />
+        <FaReact key="react" />,
+        <IoLogoCss3 key="css3" />,
+        <IoLogoJavascript key="javascript" />,
       ],
       source: "https://github.com/Samyak0-0/meals_finder_app",
     },
@@ -214,9 +215,9 @@ const ContextProvider = ({ children }) => {
       viewimg: stock_tracker_app,
       Link: "https://stock-tracker-app-samyaks-projects.vercel.app",
       techIcons: [
-        <FaReact />,
-        <IoLogoCss3 />,
-        <IoLogoJavascript />
+        <FaReact key="react" />,
+        <IoLogoCss3 key="css3" />,
+        <IoLogoJavascript key="javascript" />,
       ],
       source: "https://github.com/Samyak0-0/stock_tracker_app",
     },
@@ -229,9 +230,9 @@ const ContextProvider = ({ children }) => {
       viewimg: team_member_app,
       Link: "https://samyak0-0.github.io/team_member_app",
       techIcons: [
-        <FaReact />,
-        <IoLogoCss3 />,
-        <IoLogoJavascript />
+        <FaReact key="react" />,
+        <IoLogoCss3 key="css3" />,
+        <IoLogoJavascript key="javascript" />,
       ],
       source: "https://github.com/Samyak0-0/team_member_app",
     },

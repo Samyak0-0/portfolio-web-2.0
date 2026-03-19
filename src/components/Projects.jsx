@@ -3,7 +3,7 @@ import "react-slideshow-image/dist/styles.css";
 import { useGlobalContext } from "./Context";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { IoCalendarOutline } from "react-icons/io5";
+// import { IoCalendarOutline } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
 
 import { browserName } from "react-device-detect";
@@ -243,7 +243,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${416 - a} Q ${bezX - 174} ${bezY - a} ${b} ${416 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
             <path
@@ -253,7 +253,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${426 - a} Q ${bezX - 174} ${bezY - a} ${b} ${426 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
             <path
@@ -263,7 +263,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${436 - a} Q ${bezX - 174} ${bezY - a} ${b} ${436 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
             <path
@@ -273,7 +273,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${446 - a} Q ${bezX - 174} ${bezY - a} ${b} ${446 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
             <path
@@ -283,7 +283,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${456 - a} Q ${bezX - 174} ${bezY - a} ${b} ${456 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
             <path
@@ -293,7 +293,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                   : `M 0 ${466 - a} Q ${bezX - 174} ${bezY - a} ${b} ${466 - a}`
               }
               fill="none"
-              stroke-width="3"
+              strokeWidth="3"
               stroke="white"
             />
           </svg>
@@ -302,10 +302,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
       <div className="container1 w-full flex flex-col justify-center gap-[20vh]">
         <div className="flex flex-col mdd:grid mdd:grid-cols-2 md:gap-7 mdd:gap-[5vw] place-items-center mx-3 overflow-hidden">
           <div className="flex flex-col justify-between items-center md:gap-7 mdd:gap-24 overflow-visible">
-            {ProjDesc.filter((e) => e.sn == 0 || e.sn == 2).map((e) => {
+            {ProjDesc.filter((e) => e.sn == 0 || e.sn == 2).map((e, index) => {
               if (e.sn == 0)
                 return (
                   <div
+                    key={`${e.title}-${e.sn}-${index}`}
                     id="img1"
                     className="w-full my-5 overflow-hidden rounded-t-3xl"
                     onClick={() => openModal(e.sn)}
@@ -343,6 +344,7 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
               if (e.sn == 2)
                 return (
                   <div
+                    key={`${e.title}-${e.sn}-${index}`}
                     className="w-full my-5 overflow-hidden rounded-t-3xl   "
                     id="img2"
                     onClick={() => openModal(e.sn)}
@@ -380,11 +382,12 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
             })}
           </div>
           <div className="flex flex-col justify-between items-center md:gap-24 relative mdd:top-[10vh] pb-20 overflow-visible">
-            {ProjDesc.filter((e) => e.sn == 1).map((e) => {
+            {ProjDesc.filter((e) => e.sn == 1).map((e, index) => {
               return (
                 <div
                   className="w-full my-5 overflow-hidden rounded-t-3xl  "
                   id="img3"
+                  key={`${e.title}-${e.sn}-${index}`}
                   onClick={() => openModal(e.sn)}
                 >
                   <div

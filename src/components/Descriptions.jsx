@@ -1,4 +1,3 @@
-import React from "react";
 import { FaCircleXmark, FaCircle } from "react-icons/fa6";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { useGlobalContext } from "./Context";
@@ -8,7 +7,7 @@ const Descriptions = () => {
     useGlobalContext();
 
   return (
-    <div className="modal_overlay z-[60]" >
+    <div className="modal_overlay z-[60]">
       <div className="modal">
         <div className="mac_tab">
           <FaCircleXmark
@@ -45,12 +44,28 @@ const Descriptions = () => {
             <div className="description text-sm md:text-base lg:text-xl mdd:w-[30vw] ">
               {ProjDesc[selectedSn].description}
             </div>
-            
-              <div className="modal_links w-full text-sm md:text-base lg:text-xl flex flex-col md:flex-row">
-                <div className="grid place-items-center"><a href={ProjDesc[selectedSn].source} target='_blank'  className=" py-[5px] px-[10px] xl:py-[10px] xl:px-[20px] website_source"> Source Code </a></div>
-                <div className="grid place-items-center"><a href={ProjDesc[selectedSn].Link} target='_blank'  className=" py-[5px] px-[10px] xl:py-[10px] xl:px-[20px] website_link">Website Link</a></div>
+
+            <div className="modal_links w-full text-sm md:text-base lg:text-xl flex flex-col md:flex-row">
+              <div className="grid place-items-center">
+                <a
+                  href={ProjDesc[selectedSn].source}
+                  target="_blank"
+                  className=" py-[5px] px-[10px] xl:py-[10px] xl:px-[20px] website_source"
+                >
+                  {" "}
+                  Source Code{" "}
+                </a>
               </div>
-            
+              <div className="grid place-items-center">
+                <a
+                  href={ProjDesc[selectedSn].Link}
+                  target="_blank"
+                  className=" py-[5px] px-[10px] xl:py-[10px] xl:px-[20px] website_link"
+                >
+                  Website Link
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
