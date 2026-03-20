@@ -12,6 +12,12 @@ import travelapes2 from "../assets/travelapes2.jpg";
 import habitician1 from "../assets/habitician1.jpg";
 import habitician2 from "../assets/habitician2.jpg";
 
+import etherFront from "../assets/ether-front.png";
+import etherBack from "../assets/ether-back2.png";
+
+import incorpfirmFront from "../assets/incorpfirm-front.png";
+import incorpfirmBack from "../assets/incorpfirm-back.png";
+
 import portfolio_v1 from "../assets/portfolio_v1.png";
 import stock_tracker_app from "../assets/stock_tracker_app.png";
 import meals_app from "../assets/meals_app.png";
@@ -37,6 +43,11 @@ import { BiHive } from "react-icons/bi";
 import { SiFlutter } from "react-icons/si";
 import { DiDart } from "react-icons/di";
 import { CiMap } from "react-icons/ci";
+import { FaDocker } from "react-icons/fa6";
+import { BiLogoFlask } from "react-icons/bi";
+import { SiLlvm } from "react-icons/si";
+import { FaRust } from "react-icons/fa6";
+import { FaTerminal } from "react-icons/fa6";
 // import { FaMap } from "react-icons/fa";
 
 const Context = React.createContext();
@@ -81,12 +92,61 @@ const ContextProvider = ({ children }) => {
   const ProjDesc = [
     {
       sn: 0,
+      title: "IncorpFirm",
+      description:
+        "IncorpFirm is a full-stack web application built using React, Node (Express) and PostgreSQL with implementations of document generation, admin dashboard, multi step forms with progression auto-save and a fully Dockerized node and postgres back-end.",
+      front_img: incorpfirmFront,
+      viewimg: incorpfirmBack,
+      Link: null,
+      techIcons: [
+        <FaDocker key="docker" />,
+        <FaReact key="react" />,
+        <SiTypescript key="typescript" />,
+        <FaNodeJs key="node" />,
+        <SiExpress key="express" />,
+        <BiLogoPostgresql key="postgresql" />,
+      ],
+      source: "https://github.com/Samyak0-0/Company-Incorporation-Tool",
+    },
+    {
+      sn: 1,
+      title: "Investra",
+      description:
+        "A web-based application that combines modern web development with intelligent predictive models. It features a LSTM neural network, sentiment analysis and Monte Carlo simulations to predict and analyse the stock market, built using Next.js, Flask, and PostgreSQL.",
+      front_img: investra1,
+      viewimg: investra2,
+      Link: null,
+      techIcons: [
+        <SiNextdotjs key="nextjs" />,
+        <FaPython key="python" />,
+        <BiLogoFlask key="flask" />,
+        <BiLogoPostgresql key="postgresql" />,
+      ],
+      source: "https://github.com/Samyak0-0/investra_backend",
+    },
+    {
+      sn: 2,
+      title: "Compiler and Programming Language",
+      description:
+        "Ether is a functional programming language made using LLVM Infrastructure that supports functions, control statements, loops, arrays, enums and structs along with standard read and write operations. A custom compiler-frontend ETC (Ether Compiler) was also written in Rust to compile the .etr (ether) files to executables.",
+      front_img: etherFront,
+      viewimg: etherBack,
+      Link: null,
+      techIcons: [
+        <FaRust key="rust" />,
+        <FaTerminal key="terminal" />,
+        <SiLlvm key="llvm" title="llvm" />,
+      ],
+      source: "https://github.com/shri-acha/Ether",
+    },
+    {
+      sn: 3,
       title: "Habitician",
       description:
         "Habitican, a personal habit tracking and day planner app built using Flutter. It includes a habit tracker, integrated daily to-do list, along with personalized scheduling, notifications(reminders), and trackers for each habit and daily goals.",
       front_img: habitician1,
       viewimg: habitician2,
-      Link: "https://github.com/Samyak0-0/habitican",
+      Link: null,
       techIcons: [
         <SiFlutter key="flutter" />,
         <DiDart key="dart" />,
@@ -95,13 +155,13 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/blog",
     },
     {
-      sn: 1,
+      sn: 4,
       title: "TravlApes",
       description:
         "TravlApes is an travel planner app and a live trip guide built using Flutter, Fast API and Open Street Map(OSM). It includes personalized travel recommendations, Routing features during a trip and shareable trip snapshots",
       front_img: travelapes1,
       viewimg: travelapes2,
-      Link: "https://github.com/Samyak0-0/TravlApes_frontend/",
+      Link: null,
       source: "https://github.com/Samyak0-0/TravlApes_backend",
       techIcons: [
         <SiFlutter key="flutter" />,
@@ -111,22 +171,7 @@ const ContextProvider = ({ children }) => {
       ],
     },
     {
-      sn: 2,
-      title: "Investra",
-      description:
-        "A web-based application that combines modern web development with intelligent predictive models. It features a LSTM neural network, sentiment analysis and Monte Carlo simulations to predict and analyse the stock market, built using Next.js, Flask, and PostgreSQL.",
-      front_img: investra1,
-      viewimg: investra2,
-      Link: "https://github.com/Samyak0-0/investra_frontend",
-      techIcons: [
-        <SiNextdotjs key="nextjs" />,
-        <FaPython key="python" />,
-        <BiLogoPostgresql key="postgresql" />,
-      ],
-      source: "https://github.com/Samyak0-0/investra_backend",
-    },
-    {
-      sn: 3,
+      sn: 5,
       title: "Blog App",
       description:
         "This blog page allows users log in with Google to create, share and comment on posts, built with Next.js, MongoDB, Prisma, OAuth, and Firebase. With a sleek and simple UI, Users can explore posts by category, share their thoughts and get feedback easily.",
@@ -142,7 +187,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/blog",
     },
     {
-      sn: 4,
+      sn: 6,
       title: "Chat-app",
       description:
         "A real time messaging app made using the MERN Stack along with json web tokens(JWT), Web Sockets and typescript. Sensitive information are all encrypted using bycrpyt js and stored in mongo DB, the use of Web Sockets allows for real time online status update and communication between users.",
@@ -160,7 +205,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/chat-app-live-v2",
     },
     {
-      sn: 5,
+      sn: 7,
       title: "Freelance Website Project",
       description:
         "A freelance job where I created a stunning musical portfolio fro my client, using react js, tailwind, vite and a focus on easy updatability.",
@@ -177,7 +222,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/music_portfolio_project_v2",
     },
     {
-      sn: 6,
+      sn: 7,
       title: "Portfolio - v.1.0 (outdated) ",
       description:
         "This used to be my previous portfolio website made primarily using react JS.",
@@ -192,7 +237,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/temp-portfolio-website",
     },
     {
-      sn: 7,
+      sn: 8,
       title: "Meals Finder App",
       description:
         "A website that helps to find new meals and search various recipes with the help of React JS, CSS and Meals API.",
@@ -207,7 +252,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/meals_finder_app",
     },
     {
-      sn: 8,
+      sn: 9,
       title: "Stock Tracker App",
       description:
         "A website that can track all of the popular stocks, explore new ones and observe their performances in graph using the data fetched from FinnHub API.",
@@ -222,7 +267,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/stock_tracker_app",
     },
     {
-      sn: 9,
+      sn: 10,
       title: "Team Manager App",
       description:
         " A website to help you or an organization manage, assign and track your specific team and their team members.",

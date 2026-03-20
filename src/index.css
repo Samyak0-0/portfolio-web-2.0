@@ -426,7 +426,7 @@ div[id^="magneto"] {
 .modal_links {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -436,8 +436,7 @@ div[id^="magneto"] {
     background-color: #00000000;
     color: #272f3b;
     border: 2px solid #334155;
-    margin: 10px 1rem;
-    border-radius: 30px;
+    border-radius: 0.375rem;
     position: relative;
 }
 

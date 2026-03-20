@@ -377,7 +377,11 @@ const Expertise2 = () => {
               nodeCanvasObject={nodeCanvasObject}
               nodeCanvasObjectMode={() => "replace"}
               // backgroundColor="#000000"
-              width={window.innerWidth * 0.6}
+              width={
+                window.innerWidth > 1200
+                  ? window.innerWidth * 0.6
+                  : window.innerWidth * 0.8
+              }
               height={window.innerHeight * 0.6}
               linkColor={linkColor}
               linkWidth={linkWidth}
