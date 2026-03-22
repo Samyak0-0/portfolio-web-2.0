@@ -10,6 +10,11 @@ const Descriptions2 = () => {
 
   return (
     <div className="modal z-[60]">
+      <div className="absolute text-slate-800 w-full grid place-items-center bottom-4 text-sm sm:text-base md:text-lg lg:text-xl">
+        <h1>
+          {ProjDesc[selectedSn].sn + 1} / {ProjDesc.length}
+        </h1>
+      </div>
       <div className="relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-3 sm:mb-4 md:mb-6 ml-3 sm:ml-4 md:ml-6 mt-3 sm:mt-4 md:mt-6 z-50 overflow-visible">
         {ProjDesc[selectedSn].title}
       </div>
@@ -22,10 +27,13 @@ const Descriptions2 = () => {
         />
       </button>
 
-      <div className="flex flex-col xl:flex-row w-full p-4 sm:p-6 md:p-8 lg:p-10 xl:m-12 h-full z-0 justify-center items-center">
+      <div className="flex flex-col lg:flex-row w-full p-4 sm:p-6 md:p-8 lg:p-10 xl:m-12 h-full z-0 justify-center items-center">
         <div
-          style={{ minWidth: "30%", maxWidth: "50%" }}
-          className="overflow-hidden h-1/2 mdd:h-full border-2 border-slate-700 rounded-lg"
+          style={{
+            minWidth: window.innerWidth > 1000 ? "40%" : "80%",
+            maxWidth: window.innerWidth > 1000 ? "50%" : "90%",
+          }}
+          className="overflow-hidden h-4/5 mdd:h-full border-2 border-slate-700 rounded-lg"
         >
           <img
             style={{ objectPosition: "0% 50%" }}
@@ -86,7 +94,7 @@ const Descriptions2 = () => {
 
         <div className="pointer-events-auto left_scroll" onClick={left_scroll}>
           <AiOutlineLeft
-            size="40px"
+            size={window.innerHeight < 1000 ? "20px" : "40px"}
             className="sm:w-[55px] sm:h-[55px] md:w-[70px] md:h-[70px]"
           />
         </div>
@@ -95,7 +103,7 @@ const Descriptions2 = () => {
           onClick={right_scroll}
         >
           <AiOutlineRight
-            size="40px"
+            size={window.innerHeight < 1000 ? "20px" : "40px"}
             className="sm:w-[55px] sm:h-[55px] md:w-[70px] md:h-[70px]"
           />
         </div>

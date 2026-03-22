@@ -60,19 +60,19 @@ const ContextProvider = ({ children }) => {
     setShowModal(false);
   };
 
-  const repeatedUpcommingProjects = 3;
-  const numberOfUpcommingProjects = 4;
+  // const repeatedUpcommingProjects = 3;
+  // const numberOfUpcommingProjects = 4;
 
   const left_scroll = () => {
     if (selectedSn == 0) {
-      setSelectedSn(ProjDesc.length - 1 - repeatedUpcommingProjects);
+      setSelectedSn(ProjDesc.length - 1);
     } else {
       setSelectedSn(selectedSn - 1);
     }
   };
 
   const right_scroll = () => {
-    if (selectedSn >= ProjDesc.length - 1 - repeatedUpcommingProjects) {
+    if (selectedSn >= ProjDesc.length - 1) {
       setSelectedSn(0);
     } else {
       setSelectedSn(selectedSn + 1);
@@ -222,7 +222,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/music_portfolio_project_v2",
     },
     {
-      sn: 7,
+      sn: 8,
       title: "Portfolio - v.1.0 (outdated) ",
       description:
         "This used to be my previous portfolio website made primarily using react JS.",
@@ -237,7 +237,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/temp-portfolio-website",
     },
     {
-      sn: 8,
+      sn: 9,
       title: "Meals Finder App",
       description:
         "A website that helps to find new meals and search various recipes with the help of React JS, CSS and Meals API.",
@@ -252,7 +252,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/meals_finder_app",
     },
     {
-      sn: 9,
+      sn: 10,
       title: "Stock Tracker App",
       description:
         "A website that can track all of the popular stocks, explore new ones and observe their performances in graph using the data fetched from FinnHub API.",
@@ -267,7 +267,7 @@ const ContextProvider = ({ children }) => {
       source: "https://github.com/Samyak0-0/stock_tracker_app",
     },
     {
-      sn: 10,
+      sn: 11,
       title: "Team Manager App",
       description:
         " A website to help you or an organization manage, assign and track your specific team and their team members.",
@@ -310,8 +310,6 @@ const ContextProvider = ({ children }) => {
         right_scroll,
         left_scroll,
         ProjDesc,
-        repeatedUpcommingProjects,
-        numberOfUpcommingProjects,
       }}
     >
       {children}

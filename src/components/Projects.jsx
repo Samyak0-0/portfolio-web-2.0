@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import "react-slideshow-image/dist/styles.css";
 import { useGlobalContext } from "./Context";
-import { HiOutlineArrowLongRight } from "react-icons/hi2";
+import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosArrowRoundForward } from "react-icons/io";
 // import { IoCalendarOutline } from "react-icons/io5";
 import { HashLink } from "react-router-hash-link";
@@ -326,7 +326,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                           transition: "all .25s ease-out",
                         }}
                       >
-                        <HiOutlineArrowLongRight size={50} />
+                        <FaArrowRightLong
+                          strokeWidth={2}
+                          size={50}
+                          style={{ transform: `rotate(-30deg)` }}
+                        />
                       </div>
                       <img
                         src={e.front_img}
@@ -364,7 +368,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                           transition: "all .25s ease-out",
                         }}
                       >
-                        <HiOutlineArrowLongRight size={50} />
+                        <FaArrowRightLong
+                          strokeWidth={2}
+                          size={50}
+                          style={{ transform: `rotate(-30deg)` }}
+                        />
                       </div>
                       <img
                         src={e.front_img}
@@ -405,7 +413,11 @@ c29 -6 95 -31 147 -56 312 -149 434 -520 278 -841 -39 -80 -153 -204 -230
                         transition: "all .25s ease-out",
                       }}
                     >
-                      <HiOutlineArrowLongRight size={50} />
+                      <FaArrowRightLong
+                        strokeWidth={2}
+                        size={50}
+                        style={{ transform: `rotate(-30deg)` }}
+                      />
                     </div>
 
                     <img
